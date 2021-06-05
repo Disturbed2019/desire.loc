@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded",function(){
 const openBtn = document.querySelector('.header__btn');
 const closeBtn = document.querySelector('.rightside-menu__close');
 const menu = document.querySelector('.rightside-menu');
+const slider = document.querySelector('.top__slider');
+const contact_slider = document.querySelector('.contact-slider');
+const article_slider = document.querySelector('.article-slider__box');
+const mix = document.querySelector('.gallery__inner');
+const  label = document.querySelector('.post-checkbox__label');
+
+
 const openMenu = () =>{
     menu.classList.remove('rightside-menu--close');
 };
@@ -14,9 +21,7 @@ const closeMenu = () =>{
     openBtn.addEventListener('click', openMenu);
     closeBtn.addEventListener('click', closeMenu);
 
-    const slider = document.querySelector('.top__slider');
-    const contact_slider = document.querySelector('.contact-slider');
-    const article_slider = document.querySelector('.article-slider__box');
+
     if (slider || contact_slider || article_slider){
         $('.top__slider').slick({
             dots: true,
@@ -40,7 +45,7 @@ const closeMenu = () =>{
 
     }
 
-    let mix = document.querySelector('.gallery__inner');
+
     if (mix){
         let Mixer = mixitup ( '.gallery__inner',{
             load: {
@@ -48,6 +53,10 @@ const closeMenu = () =>{
             }
         } )
     }
+
+    label.addEventListener('click', () => {
+        label.classList.toggle('active');
+    });
 
 
 });
