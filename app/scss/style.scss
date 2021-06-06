@@ -1119,7 +1119,56 @@
       background-image: url('../images/icons/post-next.svg');
     }
   }
+  &__comments{
+    &-title{
+      @extend %title-font;
+      color: $title;
+      font-size: 20px;
+      line-height: 31px;
+      margin-bottom: 15px;
+    }
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+    &-avatar{
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 13px;
+    }
+    &-name{
+      font-size: 16px;
+      line-height: 23px;
+      @extend %title-font;
+      color: $title;
+    }
+    &-date{
+      font-size: 14px;
+      line-height: 28px;
+      color: #a1a1a1;
+    }
+    &-text{
+      color: $default;
+      margin-top: 10px;
+    }
+    &-reply{
+      background: transparent;
+      border:none;
+      color: #707070;
+      font-size: 14px;
+      line-height: 28px;
+      padding: 0;
+      margin-left: 5px;
+    }
+  }
+
 }
+
+
 .blog-post__form{
   display: flex;
   justify-content: space-between;
